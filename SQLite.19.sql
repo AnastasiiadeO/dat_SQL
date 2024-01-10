@@ -5,13 +5,13 @@ CREATE TABLE funcionarios (
   salario FLOAT
   );
   
-  INSERT INTO funcionarios (
+INSERT INTO funcionarios (
     id,
     nome,
     departamento,
     salario)
-    VALUES
-    (1, 'Heitor Vieira', 'Financeiro', 4959.22),
+VALUES
+(1, 'Heitor Vieira', 'Financeiro', 4959.22),
 (2, 'Daniel Campos', 'Vendas', 3884.44),
 (3, 'Luiza Dias', 'TI', 8205.78),
 (4, 'Davi Lucas Moraes', 'Financeiro', 8437.02),
@@ -21,7 +21,6 @@ CREATE TABLE funcionarios (
 (8, 'Sra. Manuela Azevedo', 'Vendas', 6101.88),
 (9, 'Brenda Cardoso', 'TI', 8853.34),
 (10, 'Danilo Souza', 'TI', 8242.14);
-
 SELECT * FROM funcionarios;
 
 SELECT nome from funcionarios WHERE departamento = 'Vendas';
@@ -42,6 +41,7 @@ CREATE TABLE projetos (
     id_gerente INT,
     FOREIGN KEY (id_gerente) REFERENCES funcionarios(id)
 );
+
 INSERT INTO projetos (
   id_projeto, 
   nome_projeto, 
